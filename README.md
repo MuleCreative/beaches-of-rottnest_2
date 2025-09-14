@@ -35,8 +35,8 @@ Beaches of Rottnest celebrates the island's most dazzling shores — those glitt
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/beaches-of-rottnest.git
-   cd beaches-of-rottnest
+   git clone https://github.com/MuleCreative/beaches-of-rottnest_2.git
+   cd beaches-of-rottnest_2
    ```
 
 2. Start a local development server:
