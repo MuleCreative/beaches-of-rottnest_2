@@ -197,6 +197,11 @@ body {
   min-height: 200px;
 }
 
+/* Hide mobile-specific name+rating container on desktop */
+.beach-card__name-rating {
+  display: none;
+}
+
 .beach-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-card-hover);
@@ -420,16 +425,11 @@ body {
 
   .beach-card__image {
     height: 42px;
-    padding: var(--spacing-lg);
     background: linear-gradient(0deg, white 0%, white 100%), 
                 linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: url('https://placehold.co/360x42');
     background-size: cover;
     background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     border-radius: var(--border-radius);
     overflow: hidden;
   }
@@ -444,17 +444,24 @@ body {
     background: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    gap: 0.625rem; /* 10px gap between image and name+rating */
     height: auto;
   }
 
   .beach-card__header {
-    width: 100%;
+    display: none; /* Hide desktop header on mobile */
+  }
+
+  /* Mobile-specific name+rating container */
+  .beach-card__name-rating {
+    width: 380px;
+    padding: 0.25rem 0.5rem; /* 4px vertical, 8px horizontal */
+    background: var(--color-surface-background);
+    border-radius: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: none;
+    margin: 0 auto;
   }
 
   .beach-card__name {
