@@ -1,0 +1,1533 @@
+/* CSS Custom Properties */
+:root {
+  --color-primary: #FF5E36;
+  --color-text-primary: #513129;
+  --color-text-secondary: #343330;
+  --color-text-light: #ffffff;
+  --color-surface-background: #FFF9F4;
+  --color-surface-warm-7: #C79E71;
+  --color-surface-warm-8: #5D4934;
+  --color-white: #ffffff;
+  --color-bus-primary: #024438;
+  --color-bus-secondary: #1BA48B;
+  --color-bus-light: #EBFAF7;
+  --color-bus-accent: #CFF1EA;
+  --color-text-muted: #545454;
+  --color-form-border: #E1E5E5;
+  --color-form-border-focus: #FF5E36;
+  --color-form-placeholder: #818585;
+  --color-form-help: #64748B;
+  --color-form-error: #DC2626;
+  --color-footer-bg: #ABE6FD;
+  --color-footer-main: #FF5E36;
+  --font-family: 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --border-radius: 16px;
+  --border-radius-small: 8px;
+  --border-radius-full: 200px;
+  --transition-base: all 0.3s ease-in-out;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-surface-background);
+  line-height: 1.6;
+}
+
+/* Header Component */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+  width: 100%;
+  padding-bottom: var(--spacing-2xl);
+}
+
+.header__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 185px;
+  padding: 0 var(--spacing-2xl);
+}
+
+.header__logo-image {
+  width: 158px;
+  height: 169px;
+  object-fit: contain;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem;
+  width: 100%;
+  padding: 0 var(--spacing-2xl) var(--spacing-lg);
+}
+
+.header__title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8125rem;
+  width: 100%;
+}
+
+.header__brand {
+  font-family: var(--font-family);
+  font-size: 1.625rem;
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--color-primary);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header__tagline {
+  font-family: var(--font-family);
+  font-size: clamp(2rem, 5vw, 4.4375rem);
+  font-weight: 700;
+  line-height: 0.98;
+  color: var(--color-text-primary);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 1108px;
+}
+
+.header__actions {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-width: 150px;
+  padding: 0.75rem 1rem;
+  background: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-full);
+  text-decoration: none;
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn__text {
+  font-family: var(--font-family);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 0.7;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.btn__icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+/* Beach Cards Section */
+.beaches-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.beaches-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.beaches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  align-content: start;
+}
+
+/* Beach Card Component */
+.beach-card {
+  background: var(--color-surface-background);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition-base);
+  cursor: pointer;
+  min-height: 200px;
+}
+
+.beach-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.beach-card--selected {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.beach-card__image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.beach-card__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.beach-card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.beach-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.beach-card__name {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-light);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.beach-card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+
+.beach-card__rating-score {
+  font-family: var(--font-family);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 0.88;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Highlight Tags */
+.beach-card__highlights {
+  display: flex;
+  gap: var(--spacing-sm);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition-base);
+  flex-wrap: wrap;
+}
+
+.beach-card:hover .beach-card__highlights {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beach-card--selected .beach-card__highlights {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.375rem;
+  background: var(--color-white);
+  border-radius: 19px;
+  font-family: var(--font-family);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-surface-warm-8);
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-tag__icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-surface-warm-7);
+  flex-shrink: 0;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header__container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .header__logo {
+    height: 120px;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .header__logo-image {
+    width: 120px;
+    height: 128px;
+  }
+  
+  .header__content {
+    padding: 0 var(--spacing-sm) var(--spacing-md);
+    gap: var(--spacing-xl);
+  }
+  
+  .header__title-section {
+    gap: var(--spacing-md);
+  }
+  
+  .header__brand {
+    font-size: 1.25rem;
+  }
+  
+  .header__tagline {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+  
+  .header__actions {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  .btn__text {
+    font-size: 1.5rem;
+  }
+
+  .beaches-section__container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .beaches-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .beach-card__content {
+    padding: var(--spacing-md);
+  }
+
+  .beach-card__name {
+    font-size: 1.125rem;
+  }
+
+  .beach-card__rating-score {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    height: 100px;
+  }
+  
+  .header__logo-image {
+    width: 100px;
+    height: 107px;
+  }
+  
+  .header__brand {
+    font-size: 1.125rem;
+  }
+  
+  .btn__text {
+    font-size: 1.25rem;
+  }
+
+  .beach-card__content {
+    padding: var(--spacing-sm);
+  }
+
+  .beach-card__name {
+    font-size: 1rem;
+  }
+
+  .beach-card__rating-score {
+    font-size: 1.5rem;
+  }
+
+  .highlight-tag {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.25rem;
+  }
+}
+
+/* Bus Schedule Section */
+.bus-schedule {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-2xl) auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.bus-schedule__container {
+  padding: var(--spacing-2xl);
+}
+
+/* Bus Schedule Header */
+.bus-schedule__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.bus-schedule__title-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.bus-schedule__title {
+  font-family: var(--font-family);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-bus-primary);
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.bus-schedule__subtitle {
+  font-family: var(--font-family);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-bus-secondary);
+  margin: 0;
+}
+
+.bus-schedule__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Bus Button Variant */
+.btn--bus {
+  background: var(--color-bus-light);
+  color: var(--color-bus-primary);
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--border-radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.btn--bus:hover {
+  background: var(--color-bus-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.btn--bus .btn__text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-bus-primary);
+  text-transform: none;
+}
+
+.btn--bus .btn__icon {
+  color: var(--color-bus-primary);
+}
+
+/* Important Info Section */
+.bus-schedule__info-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.bus-schedule__info-container {
+  background: var(--color-bus-secondary);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-lg);
+  height: 416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bus-schedule__info-title {
+  font-family: var(--font-family);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.17;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.bus-schedule__info-grid {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Info Box Component */
+.info-box {
+  flex: 1 1 0;
+  min-width: 300px;
+  height: 140px;
+  padding: var(--spacing-sm);
+  background: var(--color-white);
+  border-radius: var(--border-radius-small);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.125rem;
+  transition: var(--transition-base);
+}
+
+.info-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.info-box--highlighted {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  outline: 3px solid var(--color-bus-primary);
+  outline-offset: 2px;
+}
+
+.info-box__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.info-box__title {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-bus-primary);
+  margin: 0;
+}
+
+.info-box__description {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.info-box__icon {
+  width: 60px;
+  height: 60px;
+  padding: 0.25rem;
+  background: var(--color-bus-accent);
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-box__icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--color-bus-primary);
+}
+
+/* Disclaimer */
+.bus-schedule__disclaimer {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 0 0 var(--spacing-2xl) 0;
+}
+
+.bus-schedule__phone-link {
+  color: var(--color-bus-primary);
+  text-decoration: none;
+}
+
+.bus-schedule__phone-link:hover {
+  text-decoration: underline;
+}
+
+/* Schedule Grid */
+.bus-schedule__grid {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Bus Stop Card Component */
+.bus-stop-card {
+  flex: 1 1 0;
+  min-width: 360px;
+  background: #F4F4F4;
+  border-radius: var(--border-radius-small);
+  display: flex;
+  align-items: stretch;
+  gap: 0.125rem;
+  transition: var(--transition-base);
+}
+
+.bus-stop-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.bus-stop-card--selected {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  outline: 3px solid var(--color-bus-primary);
+  outline-offset: 2px;
+}
+
+.bus-stop-card__content {
+  flex: 1;
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.bus-stop-card__name {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-bus-primary);
+  margin: 0;
+}
+
+.bus-stop-card__facilities {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.bus-stop-card__stop-number {
+  width: 80px;
+  padding: var(--spacing-sm) 0.25rem;
+  background: var(--color-bus-secondary);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.bus-stop-card__stop-label {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 0.25;
+  color: var(--color-bus-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.0875rem;
+}
+
+.bus-stop-card__stop-value {
+  font-family: var(--font-family);
+  font-size: 2.5625rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #F4EEFB;
+}
+
+/* Bus Route Map */
+.bus-schedule__map {
+  width: 100%;
+  height: 298px;
+  position: relative;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  overflow: hidden;
+}
+
+.bus-schedule__map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive Design for Bus Schedule */
+@media (max-width: 768px) {
+  .bus-schedule__container {
+    padding: var(--spacing-lg);
+  }
+
+  .bus-schedule__header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: stretch;
+  }
+
+  .bus-schedule__title {
+    font-size: 1.875rem;
+  }
+
+  .bus-schedule__subtitle {
+    font-size: 2.25rem;
+  }
+
+  .bus-schedule__actions {
+    justify-content: center;
+  }
+
+  .bus-schedule__info-container {
+    height: auto;
+    padding: var(--spacing-md);
+  }
+
+  .bus-schedule__info-grid {
+    flex-direction: column;
+  }
+
+  .info-box {
+    min-width: 100%;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .bus-schedule__grid {
+    flex-direction: column;
+  }
+
+  .bus-stop-card {
+    min-width: 100%;
+  }
+
+  .bus-schedule__map {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bus-schedule__container {
+    padding: var(--spacing-md);
+  }
+
+  .bus-schedule__title {
+    font-size: 1.5rem;
+  }
+
+  .bus-schedule__subtitle {
+    font-size: 1.875rem;
+  }
+
+  .btn--bus .btn__text {
+    font-size: 1rem;
+  }
+
+  .bus-schedule__info-title {
+    font-size: 1.5rem;
+  }
+
+  .info-box__title {
+    font-size: 1.125rem;
+  }
+
+  .info-box__description {
+    font-size: 0.875rem;
+  }
+
+  .bus-stop-card__name {
+    font-size: 1.25rem;
+  }
+
+  .bus-stop-card__facilities {
+    font-size: 0.875rem;
+  }
+
+  .bus-stop-card__stop-value {
+    font-size: 2rem;
+  }
+
+  .bus-schedule__map {
+    height: 150px;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-2xl) auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.contact-section__container {
+  padding: var(--spacing-2xl);
+}
+
+/* Contact Header */
+.contact-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.contact-section__title-section {
+  flex: 1;
+}
+
+.contact-section__title {
+  font-family: var(--font-family);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.contact-section__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Feedback Button Variant */
+.btn--feedback {
+  background: #F4F4F4;
+  color: var(--color-text-primary);
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: var(--border-radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.btn--feedback:hover {
+  background: var(--color-surface-background);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.btn--feedback .btn__text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  text-transform: none;
+}
+
+.btn--feedback .btn__icon {
+  color: var(--color-primary);
+}
+
+/* Contact Content */
+.contact-section__content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Description Section */
+.contact-section__description {
+  flex: 1;
+  padding: var(--spacing-xl);
+  background: #F4F4F4;
+  border-radius: var(--border-radius-small);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.contact-section__description-title {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.contact-section__description-subtitle {
+  font-family: var(--font-family);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.contact-section__description-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.contact-section__brand-title {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.contact-section__question-title {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-muted);
+  margin: var(--spacing-sm) 0 0 0;
+}
+
+.contact-section__paragraph {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.contact-section__paragraph strong {
+  font-weight: 700;
+}
+
+/* Contact Form */
+.contact-form {
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+/* Form Components */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-label {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-primary);
+}
+
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-form-border);
+  border-radius: 6px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  transition: var(--transition-base);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-form-placeholder);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-form-border-focus);
+  box-shadow: 0 0 0 3px rgba(255, 94, 54, 0.1);
+}
+
+.form-input:invalid:not(:placeholder-shown),
+.form-textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--color-form-error);
+}
+
+.form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-help {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-form-help);
+}
+
+.form-error {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-form-error);
+  display: none;
+}
+
+.form-error.show {
+  display: block;
+}
+
+/* Submit Button */
+.btn--submit {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: var(--transition-base);
+  align-self: flex-start;
+}
+
+.btn--submit:hover {
+  background: #E54B2A;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn--submit:active {
+  transform: translateY(0);
+}
+
+.btn--submit:disabled {
+  background: var(--color-text-muted);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Form Success State */
+.contact-form.success {
+  pointer-events: none;
+}
+
+.contact-form.success .form-input,
+.contact-form.success .form-textarea {
+  background: #F0FDF4;
+  border-color: #16A34A;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+  .contact-section__container {
+    padding: var(--spacing-lg);
+  }
+
+  .contact-section__header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: stretch;
+  }
+
+  .contact-section__title {
+    font-size: 1.875rem;
+  }
+
+  .contact-section__actions {
+    justify-content: center;
+  }
+
+  .contact-section__content {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .contact-section__description {
+    padding: var(--spacing-lg);
+  }
+
+  .contact-section__description-subtitle {
+    font-size: 2.25rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section__container {
+    padding: var(--spacing-md);
+  }
+
+  .contact-section__title {
+    font-size: 1.5rem;
+  }
+
+  .contact-section__description {
+    padding: var(--spacing-md);
+  }
+
+  .contact-section__description-subtitle {
+    font-size: 1.875rem;
+  }
+
+  .contact-section__description-title,
+  .contact-section__brand-title,
+  .contact-section__question-title {
+    font-size: 1.125rem;
+  }
+
+  .contact-section__paragraph {
+    font-size: 0.875rem;
+  }
+
+  .btn--feedback .btn__text {
+    font-size: 1rem;
+  }
+}
+
+/* Footer Section */
+.footer {
+  background: var(--color-footer-bg);
+  width: 100%;
+  margin-top: var(--spacing-2xl);
+}
+
+.footer__main {
+  background: var(--color-footer-main);
+  padding: 4rem 7.5rem;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Footer Header */
+.footer__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer__title {
+  font-family: var(--font-family);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.17;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Footer Content */
+.footer__content {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+/* Footer Description */
+.footer__description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding-bottom: 0.7rem;
+}
+
+.footer__cta {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.footer__explanation {
+  font-family: var(--font-family);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* Footer Navigation */
+.footer__nav {
+  flex: 1;
+}
+
+.footer__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.footer__nav-item {
+  margin: 0;
+}
+
+.footer__nav-link {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-white);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-align: left;
+  width: 100%;
+}
+
+.footer__nav-link:hover {
+  color: var(--color-surface-background);
+  text-decoration: underline;
+}
+
+.footer__nav-link--legal {
+  cursor: pointer;
+}
+
+/* Legal Documents Area */
+.footer__legal-area {
+  width: 100%;
+  max-width: 1157px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Legal Document */
+.legal-document {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  min-width: 280px;
+  transition: var(--transition-base);
+}
+
+.legal-document--gray {
+  background: #F4F4F4;
+}
+
+.legal-document__header {
+  width: 100%;
+  padding: var(--spacing-lg);
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition-base);
+  min-height: 72px;
+}
+
+.legal-document__header:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.legal-document__header[aria-expanded="true"] {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.legal-document__title {
+  flex: 1;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-align: left;
+  margin: 0;
+}
+
+.legal-document__icon {
+  color: var(--color-text-secondary);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.legal-document__header[aria-expanded="true"] .legal-document__icon {
+  transform: rotate(180deg);
+}
+
+.legal-document__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--color-white);
+}
+
+.legal-document__content[aria-hidden="false"] {
+  max-height: 2000px;
+}
+
+.legal-document--gray .legal-document__content {
+  background: #F4F4F4;
+}
+
+.legal-document__text {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.legal-document__text h3 {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.legal-document__text h4 {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: var(--spacing-sm) 0 var(--spacing-xs) 0;
+}
+
+.legal-document__text p {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.legal-document__text ul {
+  margin: var(--spacing-xs) 0;
+  padding-left: var(--spacing-lg);
+}
+
+.legal-document__text li {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.legal-document__text a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  transition: var(--transition-base);
+}
+
+.legal-document__text a:hover {
+  color: var(--color-primary);
+}
+
+.legal-document__text strong {
+  font-weight: 600;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer__main {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .footer__title {
+    font-size: 1.75rem;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .footer__description {
+    padding-bottom: 0;
+  }
+
+  .footer__nav-list {
+    gap: var(--spacing-md);
+  }
+
+  .footer__legal-area {
+    gap: var(--spacing-md);
+  }
+
+  .legal-document__header {
+    padding: var(--spacing-md);
+    min-height: 60px;
+  }
+
+  .legal-document__text {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__main {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .footer__title {
+    font-size: 1.5rem;
+  }
+
+  .footer__cta,
+  .footer__explanation {
+    font-size: 0.875rem;
+  }
+
+  .footer__nav-link {
+    font-size: 0.875rem;
+  }
+
+  .legal-document__header {
+    padding: var(--spacing-sm);
+    min-height: 50px;
+  }
+
+  .legal-document__title {
+    font-size: 0.875rem;
+  }
+
+  .legal-document__text {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+  }
+
+  .legal-document__text h3,
+  .legal-document__text h4,
+  .legal-document__text p,
+  .legal-document__text li {
+    font-size: 0.875rem;
+  }
+}

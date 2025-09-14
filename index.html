@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beaches of Rottnest - Find the Most Sheltered Beach</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <!-- Logo Section -->
+            <div class="header__logo">
+                <img 
+                    src="https://placehold.co/158x169" 
+                    alt="Beaches of Rottnest Logo" 
+                    class="header__logo-image"
+                    width="158" 
+                    height="169"
+                />
+            </div>
+
+            <!-- Main Content -->
+            <div class="header__content">
+                <div class="header__title-section">
+                    <h1 class="header__brand">Beaches of Rottnest</h1>
+                    <h2 class="header__tagline">
+                        Find the most sheltered beach on rottnest island right now.
+                    </h2>
+                    
+                    <!-- Action Buttons -->
+                    <nav class="header__actions" aria-label="Main navigation">
+                        <a href="/shop" class="btn btn--primary" aria-label="Visit our shop">
+                            <span class="btn__text">Shop</span>
+                            <svg class="btn__icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+                                <path d="M3.09 1.97L14.91 1.97L14.91 16.03L3.09 16.03Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="/schedule" class="btn btn--primary" aria-label="View island bus schedule">
+                            <span class="btn__text">Island Bus Schedule</span>
+                            <svg class="btn__icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+                                <path d="M3.09 1.97L14.91 1.97L14.91 16.03L3.09 16.03Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Beach Cards Section -->
+    <main class="beaches-section" role="main">
+        <div class="beaches-section__container">
+            <div class="beaches-grid">
+                <!-- Beach Card 1 -->
+                <article class="beach-card" data-beach-id="1">
+                    <div class="beach-card__image" 
+                         style="background-image: url('https://placehold.co/375x207')"
+                         role="img" 
+                         aria-label="The Basin beach view">
+                        
+                        <!-- Beach Info Overlay -->
+                        <div class="beach-card__content">
+                            <div class="beach-card__header">
+                                <h3 class="beach-card__name">The Basin</h3>
+                                <div class="beach-card__rating" aria-label="Shelter rating: 9.8 out of 10">
+                                    <span class="beach-card__rating-score">9.8</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Highlight Tags (Hidden by default, shown on hover) -->
+                            <div class="beach-card__highlights" aria-label="Beach features">
+                                <span class="highlight-tag highlight-tag--secluded">
+                                    <span class="highlight-tag__text">secluded</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <circle cx="7" cy="7" r="5" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="highlight-tag highlight-tag--nature">
+                                    <span class="highlight-tag__text">rock pools</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <path d="M2 2L12 2L12 12L2 12Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Beach Card 2 -->
+                <article class="beach-card" data-beach-id="2">
+                    <div class="beach-card__image" 
+                         style="background-image: url('https://placehold.co/375x207')"
+                         role="img" 
+                         aria-label="Pinky Beach beach view">
+                        
+                        <div class="beach-card__content">
+                            <div class="beach-card__header">
+                                <h3 class="beach-card__name">Pinky Beach</h3>
+                                <div class="beach-card__rating" aria-label="Shelter rating: 9.8 out of 10">
+                                    <span class="beach-card__rating-score">9.8</span>
+                                </div>
+                            </div>
+                            
+                            <div class="beach-card__highlights" aria-label="Beach features">
+                                <span class="highlight-tag highlight-tag--secluded">
+                                    <span class="highlight-tag__text">secluded</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <circle cx="7" cy="7" r="5" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="highlight-tag highlight-tag--nature">
+                                    <span class="highlight-tag__text">rock pools</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <path d="M2 2L12 2L12 12L2 12Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Beach Card 3 -->
+                <article class="beach-card" data-beach-id="3">
+                    <div class="beach-card__image" 
+                         style="background-image: url('https://placehold.co/375x207')"
+                         role="img" 
+                         aria-label="Strickland Bay beach view">
+                        
+                        <div class="beach-card__content">
+                            <div class="beach-card__header">
+                                <h3 class="beach-card__name">Strickland Bay</h3>
+                                <div class="beach-card__rating" aria-label="Shelter rating: 9.8 out of 10">
+                                    <span class="beach-card__rating-score">9.8</span>
+                                </div>
+                            </div>
+                            
+                            <div class="beach-card__highlights" aria-label="Beach features">
+                                <span class="highlight-tag highlight-tag--secluded">
+                                    <span class="highlight-tag__text">secluded</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <circle cx="7" cy="7" r="5" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="highlight-tag highlight-tag--nature">
+                                    <span class="highlight-tag__text">rock pools</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <path d="M2 2L12 2L12 12L2 12Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Beach Card 4 -->
+                <article class="beach-card" data-beach-id="4">
+                    <div class="beach-card__image" 
+                         style="background-image: url('https://placehold.co/375x207')"
+                         role="img" 
+                         aria-label="Little Armstrong Bay beach view">
+                        
+                        <div class="beach-card__content">
+                            <div class="beach-card__header">
+                                <h3 class="beach-card__name">Little Armstrong Bay</h3>
+                                <div class="beach-card__rating" aria-label="Shelter rating: 9.8 out of 10">
+                                    <span class="beach-card__rating-score">9.8</span>
+                                </div>
+                            </div>
+                            
+                            <div class="beach-card__highlights" aria-label="Beach features">
+                                <span class="highlight-tag highlight-tag--secluded">
+                                    <span class="highlight-tag__text">secluded</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <circle cx="7" cy="7" r="5" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="highlight-tag highlight-tag--nature">
+                                    <span class="highlight-tag__text">rock pools</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <path d="M2 2L12 2L12 12L2 12Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Beach Card 5 -->
+                <article class="beach-card" data-beach-id="5">
+                    <div class="beach-card__image" 
+                         style="background-image: url('https://placehold.co/375x207')"
+                         role="img" 
+                         aria-label="Gordie Bay beach view">
+                        
+                        <div class="beach-card__content">
+                            <div class="beach-card__header">
+                                <h3 class="beach-card__name">Gordie Bay</h3>
+                                <div class="beach-card__rating" aria-label="Shelter rating: 9.8 out of 10">
+                                    <span class="beach-card__rating-score">9.8</span>
+                                </div>
+                            </div>
+                            
+                            <div class="beach-card__highlights" aria-label="Beach features">
+                                <span class="highlight-tag highlight-tag--secluded">
+                                    <span class="highlight-tag__text">secluded</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <circle cx="7" cy="7" r="5" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="highlight-tag highlight-tag--nature">
+                                    <span class="highlight-tag__text">rock pools</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <path d="M2 2L12 2L12 12L2 12Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Beach Card 6 -->
+                <article class="beach-card" data-beach-id="6">
+                    <div class="beach-card__image" 
+                         style="background-image: url('https://placehold.co/375x207')"
+                         role="img" 
+                         aria-label="Parker Point beach view">
+                        
+                        <div class="beach-card__content">
+                            <div class="beach-card__header">
+                                <h3 class="beach-card__name">Parker Point</h3>
+                                <div class="beach-card__rating" aria-label="Shelter rating: 9.8 out of 10">
+                                    <span class="beach-card__rating-score">9.8</span>
+                                </div>
+                            </div>
+                            
+                            <div class="beach-card__highlights" aria-label="Beach features">
+                                <span class="highlight-tag highlight-tag--secluded">
+                                    <span class="highlight-tag__text">secluded</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <circle cx="7" cy="7" r="5" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="highlight-tag highlight-tag--nature">
+                                    <span class="highlight-tag__text">rock pools</span>
+                                    <svg class="highlight-tag__icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                                        <path d="M2 2L12 2L12 12L2 12Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bus Schedule Section -->
+    <section class="bus-schedule" role="region" aria-labelledby="bus-schedule-heading">
+        <div class="bus-schedule__container">
+            <!-- Header -->
+            <div class="bus-schedule__header">
+                <div class="bus-schedule__title-section">
+                    <h2 id="bus-schedule-heading" class="bus-schedule__title">Island Bus schedule</h2>
+                    <h3 class="bus-schedule__subtitle">Bus to your beach.</h3>
+                </div>
+                <div class="bus-schedule__actions">
+                    <a href="https://www.rottnestisland.com/plan-your-trip/getting-around/island-explorer-bus" 
+                       class="btn btn--bus" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit Island Explorer bus website">
+                        <svg class="btn__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect x="0" y="3.5" width="32" height="25" fill="currentColor"/>
+                        </svg>
+                        <span class="btn__text">Island Explorer bus website</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Important Info Section -->
+            <div class="bus-schedule__info-section">
+                <div class="bus-schedule__info-container">
+                    <h4 class="bus-schedule__info-title">Important info</h4>
+                    <div class="bus-schedule__info-grid">
+                        <!-- Info Box 1: Where to catch -->
+                        <div class="info-box">
+                            <div class="info-box__content">
+                                <h5 class="info-box__title">Where to catch</h5>
+                                <p class="info-box__description">Main Bus Stop (#1) at Thomson Bay Settlement, near the Visitor Centre & Jetty.</p>
+                            </div>
+                            <div class="info-box__icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M2.5 1.83L29.5 1.83L29.5 30.03L2.5 30.03Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Info Box 2: Tickets -->
+                        <div class="info-box">
+                            <div class="info-box__content">
+                                <h5 class="info-box__title">Tickets</h5>
+                                <p class="info-box__description">Day pass (~$30 adult / $15 child) – unlimited hop-on hop-off.</p>
+                            </div>
+                            <div class="info-box__icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                    <rect x="2" y="6" width="28" height="20" fill="currentColor" stroke="currentColor" stroke-width="0.5"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Info Box 3: Frequency -->
+                        <div class="info-box">
+                            <div class="info-box__content">
+                                <h5 class="info-box__title">Frequency</h5>
+                                <p class="info-box__description">Every 20–30 minutes, daily from early morning to late afternoon.</p>
+                            </div>
+                            <div class="info-box__icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                    <circle cx="16" cy="16" r="12" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Info Box 4: Flexibility -->
+                        <div class="info-box">
+                            <div class="info-box__content">
+                                <h5 class="info-box__title">Flexibility</h5>
+                                <p class="info-box__description">You can cycle, walk, or bus-hop between beaches. Many families mix bus + short walks.</p>
+                            </div>
+                            <div class="info-box__icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M3.5 1.5L28.5 1.5L28.5 28.5L3.5 28.5Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Info Box 5: Best strategy -->
+                        <div class="info-box">
+                            <div class="info-box__content">
+                                <h5 class="info-box__title">Best strategy</h5>
+                                <p class="info-box__description">Use the bus for farther beaches (West End, Strickland, Armstrong) and walk/cycle to closer ones (The Basin, Pinky, Geordie/Longreach).</p>
+                            </div>
+                            <div class="info-box__icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M0.5 2.5L31.5 2.5L31.5 26.5L0.5 26.5Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <p class="bus-schedule__disclaimer">
+                Distances are approximate and schedule may vary. Check with information at the jetty or call the explorer team on 
+                <a href="tel:+61862706060" class="bus-schedule__phone-link">+61 8 6270 6060</a>
+            </p>
+
+            <!-- Schedule Grid -->
+            <div class="bus-schedule__grid">
+                <!-- Bus Stop Cards -->
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">The Basin</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">3</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Pinky Beach</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">2</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Salmon Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">7</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Little Salmon Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">6</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Strickland Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">10</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">West End (Cathedral Rocks)</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">11</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Rocky Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">13</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Stark Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">14</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Ricey Beach</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">15</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">City of York Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">16</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Little Armstrong Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">17</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Little Parakeet Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">18</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Geordie Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">19</span>
+                    </div>
+                </div>
+
+                <div class="bus-stop-card">
+                    <div class="bus-stop-card__content">
+                        <h6 class="bus-stop-card__name">Longreach Bay</h6>
+                        <p class="bus-stop-card__facilities">Toilets, shaded areas, grass for picnics</p>
+                    </div>
+                    <div class="bus-stop-card__stop-number">
+                        <span class="bus-stop-card__stop-label">Stop</span>
+                        <span class="bus-stop-card__stop-value">19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bus Route Map -->
+        <div class="bus-schedule__map">
+            <img src="https://placehold.co/1157x298" 
+                 alt="Rottnest Island bus route map showing all stops" 
+                 class="bus-schedule__map-image"
+                 width="1157" 
+                 height="298">
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section" role="region" aria-labelledby="contact-heading">
+        <div class="contact-section__container">
+            <!-- Header -->
+            <div class="contact-section__header">
+                <div class="contact-section__title-section">
+                    <h2 id="contact-heading" class="contact-section__title">Contact us</h2>
+                </div>
+                <div class="contact-section__actions">
+                    <button class="btn btn--feedback" aria-label="Share your beach experience">
+                        <svg class="btn__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <path d="M1.5 4L31 4L31 28L1.5 28Z" fill="currentColor"/>
+                        </svg>
+                        <span class="btn__text">how was the beach?</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="contact-section__content">
+                <!-- Description -->
+                <div class="contact-section__description">
+                    <h3 class="contact-section__description-title">Important info</h3>
+                    <h4 class="contact-section__description-subtitle">We'd love your feedback.</h4>
+                    <div class="contact-section__description-text">
+                        <h5 class="contact-section__brand-title">Beaches of Rottnest</h5>
+                        <p class="contact-section__paragraph">
+                            Beaches of Rottnest celebrates the island's most dazzling shores — those glittering stretches of sand that seem, at first glance, the very picture of paradise. And indeed they are… until the wind arrives, turning a tranquil afternoon into a rather undignified duel with flying sand. The secret, of course, is knowing where to go.
+                        </p>
+                        <p class="contact-section__paragraph">
+                            That is where we come in. Our rather clever algorithm considers wind speed, direction, and the natural quirks of each beach's topography to provide them a rating out of ten — <strong>arming you with the knowledge to select not merely a beach, but the right beach.</strong>
+                        </p>
+                        <h5 class="contact-section__question-title">Why not temperature, you ask?</h5>
+                        <p class="contact-section__paragraph">
+                            Ah, temperature. A most subjective metric, for it is tied to personal taste. What chills one soul invigorates another, and what feels like summer's caress to some may feel like winter's spite to others. Wind, however, is universal in its tyranny: no one delights in a mouthful of sand or seas whipped to froth. That, dear visitor, is the problem we have solved.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="contactName" class="form-label">Name</label>
+                        <div class="form-input-wrapper">
+                            <input 
+                                type="text" 
+                                id="contactName" 
+                                name="name" 
+                                class="form-input" 
+                                placeholder="Name"
+                                required
+                                aria-describedby="name-error"
+                            >
+                            <div id="name-error" class="form-error" role="alert" aria-live="polite"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail" class="form-label">Email</label>
+                        <div class="form-input-wrapper">
+                            <input 
+                                type="email" 
+                                id="contactEmail" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Email"
+                                required
+                                aria-describedby="email-error"
+                            >
+                            <div id="email-error" class="form-error" role="alert" aria-live="polite"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage" class="form-label">Your message</label>
+                        <div class="form-input-wrapper">
+                            <textarea 
+                                id="contactMessage" 
+                                name="message" 
+                                class="form-textarea" 
+                                placeholder="Type your message here"
+                                rows="4"
+                                required
+                                aria-describedby="message-error message-help"
+                            ></textarea>
+                            <div id="message-error" class="form-error" role="alert" aria-live="polite"></div>
+                            <div id="message-help" class="form-help">
+                                Your message will be copied to the support team (probably Alex).
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--submit">
+                        <span class="btn__text">Continue</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__main">
+            <div class="footer__container">
+                <!-- Header -->
+                <div class="footer__header">
+                    <h2 class="footer__title">The Right Beach. Right Now.</h2>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="footer__content">
+                    <!-- Left Column - Description -->
+                    <div class="footer__description">
+                        <p class="footer__cta">Choose a beach above to find the beach<br/>that's perfect right now.</p>
+                        <p class="footer__explanation">
+                            Rottnest has amazing beaches but we also have amazing winds. We've built a algorithm that uses local knowledge to let you choose the best beach right now based on wind direction, wind speed and the unique beach topography.
+                        </p>
+                    </div>
+
+                    <!-- Right Column - Navigation -->
+                    <nav class="footer__nav" aria-label="Footer navigation">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="#about" class="footer__nav-link">About Us</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#sitemap" class="footer__nav-link">Sitemap</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <button class="footer__nav-link footer__nav-link--legal" data-target="privacy-policy">
+                                    Privacy policy
+                                </button>
+                            </li>
+                            <li class="footer__nav-item">
+                                <button class="footer__nav-link footer__nav-link--legal" data-target="terms-conditions">
+                                    Terms and conditions
+                                </button>
+                            </li>
+                            <li class="footer__nav-item">
+                                <button class="footer__nav-link footer__nav-link--legal" data-target="cookie-policy">
+                                    Cookie policy
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Legal Documents Area -->
+                <div class="footer__legal-area">
+                    <!-- Privacy Policy -->
+                    <div class="legal-document" id="privacy-policy">
+                        <button class="legal-document__header" aria-expanded="false" aria-controls="privacy-policy-content">
+                            <span class="legal-document__title">Privacy Policy</span>
+                            <svg class="legal-document__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="legal-document__content" id="privacy-policy-content" aria-hidden="true">
+                            <div class="legal-document__text">
+                                <h3>Effective Date: September 2025</h3>
+                                <p>Beaches of Rottnest ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we handle information in connection with our website.</p>
+                                
+                                <h4>Information We Collect</h4>
+                                <p>At this time, we do not collect, store, or process any personal information from visitors to our website. You may browse our site anonymously without providing any personal details.</p>
+                                
+                                <h4>Use of Cookies & Analytics</h4>
+                                <p>Currently, we do not use cookies or tracking technologies.</p>
+                                <p>In the future, we may use Google Analytics or similar tools to help us understand how visitors interact with our website. These tools may collect information such as:</p>
+                                <ul>
+                                    <li>Pages visited</li>
+                                    <li>Time spent on pages</li>
+                                    <li>Browser type and operating system</li>
+                                    <li>General location (e.g., city or region)</li>
+                                </ul>
+                                <p>This information will only be used to improve the functionality and content of our site. You can manage or disable cookies through your browser settings.</p>
+                                
+                                <h4>Affiliate Marketing & Partnerships</h4>
+                                <p>In the future, our website may include links to affiliate partners or advertising partners. This means if you click on a link and make a purchase, we may earn a small commission at no extra cost to you.</p>
+                                <p>Affiliate partners may use their own cookies or tracking methods. We encourage you to review the privacy policies of any third-party services or websites you interact with.</p>
+                                
+                                <h4>Third-Party Links</h4>
+                                <p>Our website may contain links to external websites. We are not responsible for the privacy practices or content of those external sites.</p>
+                                
+                                <h4>Changes to This Privacy Policy</h4>
+                                <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+                                
+                                <h4>Contact Us</h4>
+                                <p>If you have any questions about this Privacy Policy, you can contact us at: <a href="mailto:agcdesign@gmail.com">agcdesign@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="legal-document legal-document--gray" id="terms-conditions">
+                        <button class="legal-document__header" aria-expanded="false" aria-controls="terms-conditions-content">
+                            <span class="legal-document__title">Terms and Conditions</span>
+                            <svg class="legal-document__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="legal-document__content" id="terms-conditions-content" aria-hidden="true">
+                            <div class="legal-document__text">
+                                <h3>Terms and Conditions</h3>
+                                <p><strong>Last updated: 7th September 2025</strong></p>
+                                <p>Welcome to Beaches of Rottnest ("we," "our," "us"). By accessing or using our website located at <a href="https://www.beachesofrottnest.com.au">www.beachesofrottnest.com.au</a> ("Site"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use our Site.</p>
+                                
+                                <h4>1. Use of the Site</h4>
+                                <p>You agree to use the Site only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the Site. Prohibited behaviour includes harassing or causing distress to any person, transmitting obscene or offensive content, or disrupting the normal flow of dialogue.</p>
+                                
+                                <h4>2. Intellectual Property</h4>
+                                <p>All content, features, and functionality on the Site, including but not limited to text, graphics, logos, images, videos, and software, are owned by or licensed to Beaches of Rottnest, and are protected by copyright, trademark, and other intellectual property laws. You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Site without express written permission.</p>
+                                
+                                <h4>3. No User Data Collection</h4>
+                                <p>Currently, our Site does not collect personal data from visitors. Should this change in the future, our Privacy Policy will be updated accordingly.</p>
+                                
+                                <h4>4. Links to Other Websites</h4>
+                                <p>Our Site may contain links to third-party websites for your convenience and information. We do not control these sites and are not responsible for their content or practices. Accessing linked sites is at your own risk.</p>
+                                
+                                <h4>5. Disclaimer of Warranties</h4>
+                                <p>The Site and all content are provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+                                
+                                <h4>6. Limitation of Liability</h4>
+                                <p>To the fullest extent permitted by law, Beaches of Rottnest shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your use or inability to use the Site.</p>
+                                
+                                <h4>7. Changes to Terms</h4>
+                                <p>We reserve the right to revise and update these Terms at any time. Changes will be posted on this page with an updated revision date. Your continued use of the Site following any changes constitutes your acceptance of the new Terms.</p>
+                                
+                                <h4>8. Governing Law</h4>
+                                <p>These Terms shall be governed and construed in accordance with the laws of Australia, without regard to its conflict of law provisions.</p>
+                                
+                                <h4>9. Contact Us</h4>
+                                <p>If you have any questions about these Terms, please contact us at <a href="mailto:agcdesign@gmail.com">agcdesign@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cookie Policy -->
+                    <div class="legal-document legal-document--gray" id="cookie-policy">
+                        <button class="legal-document__header" aria-expanded="false" aria-controls="cookie-policy-content">
+                            <span class="legal-document__title">Cookie policy</span>
+                            <svg class="legal-document__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="legal-document__content" id="cookie-policy-content" aria-hidden="true">
+                            <div class="legal-document__text">
+                                <h3>Cookie Policy</h3>
+                                <p><strong>Last updated: September 2025</strong></p>
+                                <p>This Cookie Policy explains how Beaches of Rottnest ("we," "our," "us") uses cookies and similar tracking technologies on <a href="https://www.beachesofrottnest.com.au">www.beachesofrottnest.com.au</a> ("Site"). By using our Site, you consent to our use of cookies as described in this policy.</p>
+                                
+                                <h4>What Are Cookies?</h4>
+                                <p>Cookies are small text files placed on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owners.</p>
+                                
+                                <h4>Types of Cookies We Use</h4>
+                                <ul>
+                                    <li><strong>Essential Cookies:</strong> These cookies are necessary for the operation of our Site. They enable basic functions like page navigation and access to secure areas. The Site cannot function properly without these cookies.</li>
+                                    <li><strong>Analytics Cookies:</strong> We use tools like Google Analytics to collect information about how visitors use our Site. These cookies help us improve the Site's functionality and user experience. Data collected is anonymized and does not identify individual users.</li>
+                                    <li><strong>Third-Party Cookies:</strong> Certain services integrated into our Site may set cookies. We do not control these third-party cookies and recommend reviewing their privacy policies.</li>
+                                </ul>
+                                
+                                <h4>How We Use Cookies</h4>
+                                <p>Cookies help us:</p>
+                                <ul>
+                                    <li>Remember your preferences and settings</li>
+                                    <li>Understand how you interact with our Site</li>
+                                    <li>Improve our Site's performance and content</li>
+                                    <li>Measure the effectiveness of our marketing campaigns (if applicable)</li>
+                                </ul>
+                                
+                                <h4>Your Choices Regarding Cookies</h4>
+                                <p>You can manage or disable cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Please note that blocking essential cookies may affect the functionality of the Site.</p>
+                                
+                                <p>For managing cookies:</p>
+                                <ul>
+                                    <li>In Chrome: <a href="chrome://settings/content/cookies" target="_blank" rel="noopener noreferrer">chrome://settings/content/cookies</a></li>
+                                    <li>In Firefox: <a href="about:preferences#privacy" target="_blank" rel="noopener noreferrer">about:preferences#privacy</a></li>
+                                    <li>In Safari: Preferences > Privacy</li>
+                                </ul>
+                                
+                                <p>You can also opt out of Google Analytics tracking via their <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">opt-out browser add-on</a>.</p>
+                                
+                                <h4>Updates to This Cookie Policy</h4>
+                                <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+                                
+                                <h4>Contact Us</h4>
+                                <p>If you have questions about our use of cookies, please contact us at <a href="mailto:agcdesign@gmail.com">agcdesign@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
